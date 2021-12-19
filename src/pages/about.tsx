@@ -53,7 +53,7 @@ export const about: React.FC<aboutProps> = ({}) => {
             <pre>
               <code>
                 ┌──(root💀kali)-[~] <br />
-                └─#Where are you living <br />
+                └─#Where do you living? <br />
                 Inside Terminal 🤪
               </code>
             </pre>
@@ -61,7 +61,7 @@ export const about: React.FC<aboutProps> = ({}) => {
               <code>
                 ┌──(root💀kali)-[~] <br />
                 └─#git clone my-life.git <br />
-                Do I have life? 🤣
+                Do I have a life? 🤣
               </code>
             </pre>
           </div>
