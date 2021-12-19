@@ -13,7 +13,7 @@ p {
 
 a {
   text-decoration: none;
-  color: #333;
+  color: rgb(73, 136, 143);
 }
 
 img {
@@ -101,6 +101,7 @@ ol {
   line-height: 2.3;
   background-color: rgb(88, 88, 88, 0.2);
   border-radius: 10px;
+  line-height: 22px;
 }
 
 @media (max-width: 500px) {

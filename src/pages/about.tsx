@@ -64,6 +64,44 @@ export const about: React.FC<aboutProps> = ({}) => {
                 Do I have a life? 🤣
               </code>
             </pre>
+
+            <Box>
+              <p>
+                I am an enthusiastic developer who enjoys building awesome products and loves to get his hands on learning new tools and technologies. To gather new experiences and to develop new interests I've worked on many projects in different tech-stack.
+              </p>
+              <br />
+              <p>
+                Experienced in Hackathons and also got the price of "First Runners up" and "Best use of API" from HackOdisha-2021.
+              </p>
+              <br />
+              <p>
+                I am also a freelancer!! Hire me as Full-Stack Developer, Cross-Platform Application Developer, Pentester, Machine Learning Engineer, DevOps Engineer.
+              </p>
+              <br />
+            </Box>
+            <pre>
+              <code>
+                ┌──(root💀kali)-[~] <br />
+                └─#How Do I Contact You? <br />
+                Feel free to contact me!! <br />
+                <br />
+                Gmail: {""}
+                <Link href="mailto:krishnannavadia@gmail.com">krishnannavadia@gmail.com</Link> 
+                <br />
+                Instagram: {""} 
+                <Link href="https://www.instagram.com/krishnan_navadia/">https://www.instagram.com/krishnan_navadia/</Link> 
+                <br />
+                Github: {""}
+                <Link href="https://github.com/krishnan-tech">https://github.com/krishnan-tech</Link> 
+                <br />
+                Linkedin: {""}
+                <Link href="https://www.linkedin.com/in/krishnan-navadia/">https://www.linkedin.com/in/krishnan-navadia/</Link> 
+              </code>
+            </pre>
+
+            <Box>
+                For more about me, Visit my Portfolio: <Link href="https://krishnan-tech.github.io/">https://krishnan-tech.github.io/</Link>
+            </Box>
           </div>
         </Box>
       </Box>

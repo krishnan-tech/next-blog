@@ -6,7 +6,11 @@ const Footer = () => {
       <Text>
         {new Date().getFullYear()} -{" "}
         <Link href="http://krishnan-tech.github.io/" isExternal>
-            Krishnan Navadia
+          Krishnan Navadia
+        </Link>{" "}
+        -{" "}
+        <Link href="https://github.com/krishnan-tech/next-blog" isExternal>
+          Open Source
         </Link>
       </Text>
     </Flex>
