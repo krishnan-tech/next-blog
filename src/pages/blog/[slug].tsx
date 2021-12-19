@@ -9,6 +9,7 @@ import {
   useBreakpointValue,
   useColorMode,
 } from "@chakra-ui/react";
+import Image from "next/image";
 
 interface PostPage {
   frontmatter: {
@@ -53,7 +54,7 @@ export default function PostPage({
         </Box>
 
         <div className="post-date">Posted on {date}</div>
-        <img src={cover_image} alt="" />
+        <Image src={cover_image} layout="fill" />
         <div className="post-body">
           <div
             dangerouslySetInnerHTML={
