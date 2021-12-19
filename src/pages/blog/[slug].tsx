@@ -54,7 +54,8 @@ export default function PostPage({
         </Box>
 
         <div className="post-date">Posted on {date}</div>
-        <Image src={cover_image} layout="fill" />
+        {/* <Image src={cover_image} layout="fill" /> */}
+        <img src={cover_image} alt="" />
         <div className="post-body">
           <div
             dangerouslySetInnerHTML={

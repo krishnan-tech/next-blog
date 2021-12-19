@@ -1,6 +1,7 @@
 import {
   Box,
   Button,
+  Link,
   useBreakpointValue,
   useColorMode,
 } from "@chakra-ui/react";
@@ -17,10 +18,11 @@ export const about: React.FC<aboutProps> = ({}) => {
   });
   return (
     <div>
-      <Button colorScheme="gray" size="md">
-        🔙 Back
-      </Button>
-
+      <Link  href="/">
+        <Button colorScheme="gray" size="md">
+          🔙 Back
+        </Button>
+      </Link>
       <Box mt="5" p="10" boxShadow={"0 4px 8px 0 rgb(0 0 0 / 20%)"}>
         <Box
           backgroundColor={colorMode === "light" ? "gray.200" : "gray.500"}
@@ -31,7 +33,7 @@ export const about: React.FC<aboutProps> = ({}) => {
           <Box fontSize={textSize}>About Me - Krishnan Navadia</Box>
         </Box>
         <Image
-          src={"/krishnan.jpg"}
+          src={"/Krishnan.jpg"}
           layout="responsive"
           width={"10vw"}
           height={"9vh"}
