@@ -16,7 +16,7 @@ export default function Post({ post }: { post: any }) {
       <Box
         maxW={"445px"}
         w={"full"}
-        bg={useColorModeValue("white", "gray.900")}
+        bg="transparent"
         boxShadow={"2xl"}
         rounded={"md"}
         p={6}
@@ -24,11 +24,11 @@ export default function Post({ post }: { post: any }) {
       >
         <Box
           // h={"210px"}
-          bg={"gray.100"}
           mt={-6}
           mx={-6}
           mb={6}
           pos={"relative"}
+          bg="transparent"
         >
           <Image
             src={post.frontmatter.cover_image}

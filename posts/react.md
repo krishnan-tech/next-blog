@@ -1,9 +1,9 @@
 ---
-title: "React Crash Course"
+title: "Sample React Blog"
 date: "December 19, 2021"
 excerpt: "React is a very powerful, high level Javascript framework for building web applications"
-cover_image: "/posts/django/L.jpg"
-author_image: "/posts/django/L.jpg"
+cover_image: "/posts/react/cover_image.jpg"
+author_image: "/L.jpg"
 author_name: "Krishnan Navadia"
 type: "BLOG"
 ---

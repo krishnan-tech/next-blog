@@ -1,9 +1,9 @@
 ---
-title: "Django Crash Course"
+title: "Sample Django Blog"
 date: "December 19, 2021"
 excerpt: "Django is a very powerful, high level Python framework for building web applications"
-cover_image: "/posts/django/L.jpg"
-author_image: "/posts/django/L.jpg"
+cover_image: "/posts/django/cover_image.png"
+author_image: "/L.jpg"
 author_name: "Krishnan Navadia"
 type: "BLOG"
 ---
