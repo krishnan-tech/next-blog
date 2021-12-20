@@ -53,7 +53,7 @@ export const about: React.FC<aboutProps> = ({}) => {
             <pre>
               <code>
                 ┌──(root💀kali)-[~] <br />
-                └─#Where do you living? <br />
+                └─#Where do you live? <br />
                 Inside Terminal 🤪
               </code>
             </pre>
