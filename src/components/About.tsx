@@ -29,7 +29,7 @@ export const About: React.FC<AboutProps> = ({}) => {
         padding={4}
       >
         <Flex flex={1} bg="blue.200">
-          <Image objectFit="cover" boxSize="100%" src={"Krishnan.jpg"} />
+          <Image objectFit="cover" boxSize="100%" src={"Krishnan_png.png"} />
         </Flex>
         <Stack
           flex={1}

@@ -33,7 +33,7 @@ export const about: React.FC<aboutProps> = ({}) => {
           <Box fontSize={textSize}>About Me - Krishnan Navadia</Box>
         </Box>
         <Image
-          src={"/Krishnan.jpg"}
+          src={"/Krishnan_png.png"}
           layout="responsive"
           width={"10vw"}
           height={"9vh"}
