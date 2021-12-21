@@ -2,10 +2,12 @@
 <h6 align="center">A Static Site Generation (SSG) blog website using NextJS, TypeScript, and ChakraUI. </h6>
 
 <p align="center">
+    
 [![Watch on GitHub](https://img.shields.io/github/watchers/krishnan-tech/next-blog?style=social)](https://github.com/krishnan-tech/next-blog/watchers)
 [![Star on GitHub](https://img.shields.io/github/stars/krishnan-tech/next-blog?style=social)](https://github.com/krishnan-tech/next-blog/stars)
 [![Forks on GitHub](https://img.shields.io/github/forks/krishnan-tech/next-blog?style=social)](https://github.com/krishnan-tech/next-blog/forks)
 [![GitHub license](https://img.shields.io/github/license/krishnan-tech/next-blog)](https://github.com/krishnan-tech/next-blog/blob/main/LICENSE)
+
 </p>
 
 <hr />
