@@ -25,6 +25,18 @@ pre {
   overflow: auto;
 }
 
+h1 {
+  font-size: large;
+}
+
+h2 {
+  font-size: large;
+}
+
+h3 {
+  font-size: medium;
+}
+
 .container {
   max-width: 768px;
   margin: auto;

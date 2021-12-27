@@ -57,12 +57,12 @@ export default function PostPage({
         {/* <Image src={cover_image} layout="fill" /> */}
         <img src={cover_image} alt="" />
         <div className="post-body">
-          <div
+          <Box
             dangerouslySetInnerHTML={
               //   @ts-ignore
               { __html: marked(content) }
             }
-          ></div>
+          ></Box>
         </div>
       </div>
     </>
