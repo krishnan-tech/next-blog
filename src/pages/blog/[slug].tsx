@@ -1,24 +1,16 @@
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
-import marked from "marked";
+import { Button, useBreakpointValue, useColorMode } from "@chakra-ui/react";
+import FullPost from "components/FullPost";
+import hydrate from "next-mdx-remote/hydrate";
 import Link from "next/link";
-import {
-  Box,
-  Button,
-  useBreakpointValue,
-  useColorMode,
-} from "@chakra-ui/react";
-import Image from "next/image";
+import MDXComponents from "../../components/MDXComponents";
+import { getFileBySlug, getFiles } from "../../lib/mdx";
 
 interface PostPage {
-  frontmatter: {
-    title: string;
-    date: string;
-    cover_image: string;
-  };
+  frontMatter: any;
   slug: string;
   content: any;
+  mdxSource: any;
+  props: any;
 }
 
 interface StaticProp {
@@ -28,15 +20,19 @@ interface StaticProp {
 }
 
 export default function PostPage({
-  frontmatter: { title, date, cover_image },
-  slug,
-  content,
+  mdxSource,
+  frontMatter,
 }: PostPage): JSX.Element {
   const { colorMode } = useColorMode();
   const textSize = useBreakpointValue({
     base: "xs",
     sm: "md",
   });
+
+  const hydrate_context = hydrate(mdxSource, {
+    components: MDXComponents,
+  });
+
   return (
     <>
       <Link href="/">
@@ -45,58 +41,59 @@ export default function PostPage({
         </Button>
       </Link>
       <div className="card card-page">
-        <Box
-          backgroundColor={colorMode === "light" ? "gray.200" : "gray.500"}
-          padding={4}
-          borderRadius={4}
-        >
-          <Box fontSize={textSize}>{title}</Box>
-        </Box>
-
-        <div className="post-date">Posted on {date}</div>
-        {/* <Image src={cover_image} layout="fill" /> */}
-        <img src={cover_image} alt="" />
-        <div className="post-body">
-          <Box
-            dangerouslySetInnerHTML={
-              //   @ts-ignore
-              { __html: marked(content) }
-            }
-          ></Box>
-        </div>
+        <FullPost frontMatter={frontMatter}>{hydrate_context}</FullPost>
       </div>
     </>
   );
 }
 
-export async function getStaticPaths() {
-  const files = fs.readdirSync(path.join("posts"));
+// export async function getStaticPaths() {
+//   const files = fs.readdirSync(path.join("posts"));
 
-  const paths = files.map((filename) => ({
-    params: {
-      slug: filename.replace(".md", ""),
-    },
-  }));
+//   const paths = files.map((filename) => ({
+//     params: {
+//       slug: filename.replace(".md", ""),
+//     },
+//   }));
+
+//   return {
+//     paths,
+//     fallback: false,
+//   };
+// }
+
+// export async function getStaticProps({ params: { slug } }: StaticProp) {
+//   const markdownWithMeta = fs.readFileSync(
+//     path.join("posts", slug + ".md"),
+//     "utf-8"
+//   );
+
+//   const { data: frontmatter, content } = matter(markdownWithMeta);
+
+//   return {
+//     props: {
+//       frontmatter,
+//       slug,
+//       content,
+//     },
+//   };
+// }
+
+export async function getStaticPaths() {
+  const posts = await getFiles();
 
   return {
-    paths,
+    paths: posts.map((p) => ({
+      params: {
+        slug: p.replace(/\.mdx/, ""),
+      },
+    })),
     fallback: false,
   };
 }
 
-export async function getStaticProps({ params: { slug } }: StaticProp) {
-  const markdownWithMeta = fs.readFileSync(
-    path.join("posts", slug + ".md"),
-    "utf-8"
-  );
+export async function getStaticProps({ params }: { params: any }) {
+  const post = await getFileBySlug(params.slug);
 
-  const { data: frontmatter, content } = matter(markdownWithMeta);
-
-  return {
-    props: {
-      frontmatter,
-      slug,
-      content,
-    },
-  };
+  return { props: post };
 }

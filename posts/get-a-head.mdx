@@ -1,0 +1,46 @@
+---
+title: "Get aHead"
+date: "2021-12-25"
+excerpt: "Find the flag being held on this server to get ahead of the competition"
+cover_image: "/posts/get-a-head/cover_image.png"
+author_image: "/L.jpg"
+author_name: "Krishnan Navadia"
+type: "CTF WRITEUP"
+---
+
+## Description
+
+Find the flag being held on this server to get ahead of the competition http://mercury.picoctf.net:53554/
+
+## Information
+
+`Points: 20`
+
+## Hints
+
+1. Maybe you have more than 2 choices
+
+2. Check out tools like Burpsuite to modify your requests and look at the responses
+
+## Solution
+
+1. When you open website you will see something like this.
+   ![HomePage of CTF](/posts/get-a-head/homepage.png "HomePage of CTF")
+
+2. Check the source code.
+   ![Source Code of CTF](/posts/get-a-head/source_code.png "source code of CTF")
+   You will see that the request for the color is distinguish by the request method like GET and POST.
+
+3. Check for the PUT, Delete, Patch Request.
+   ![PUT Request](/posts/get-a-head/put_req.png "PUT Request")
+
+   - Here the background-color is "?" that means something might be there 🤔.
+   - So, let's try for HEAD request.
+
+4. HEAD Request.
+   ![HEAD Request](/posts/get-a-head/head_req.png "HEAD Request")
+   and then we got the Flag 🎉
+
+## Flag
+
+`picoCTF{r3j3ct_th3_du4l1ty_6ef27873}`
