@@ -1,0 +1,39 @@
+---
+title: "Cookies - PicoCTF"
+date: "2021-12-30"
+excerpt: "Who doesn't love cookies? Try to figure out the best one."
+cover_image: "/posts/cookies-picoctf/cover_image.png"
+author_image: "/L.jpg"
+author_name: "Krishnan Navadia"
+type: "CTF WRITEUP"
+---
+
+## Description
+
+Who doesn't love cookies? Try to figure out the best one. http://mercury.picoctf.net:6418/
+
+## Information
+
+`Points: 40`
+
+## Hints
+
+(None)
+
+## Solution
+
+1. When you open website you will see something like this.
+   ![HomePage of CTF](/posts/cookies-picoctf/homepage.png "HomePage of CTF")
+
+2. As there is a input element in website and placeholder is "snickerdoodle". I typed in "snickerdoodle" and press enter, then I see, `"I love snickerdoodle cookies!"`
+   ![I love snickerdoodle cookies!](/posts/cookies-picoctf/snickerdoodle.png "I Love snickerdoodle cookies!")
+   Now, when you see devtools cookie page (open devtools using `ctrl + shift + i`), then I can see, change in the `name` cookie from `-1` to `0`.
+
+3. So, I thought to change it to `1`, `2`, `3`...
+
+4. And finally on `name=18` I got the flag, YAY!!! 🎉
+   ![Flag in cookies picoctf](/posts/cookies-picoctf/flag.png "flag in cookies picoctf")
+
+## Flag
+
+`picoCTF{3v3ry1_l0v3s_c00k135_88acab36}`
