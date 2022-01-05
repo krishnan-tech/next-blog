@@ -33,6 +33,22 @@ const MyApp = ({
             name="viewport"
             content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, viewport-fit=cover"
           />
+          <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-D6C22PCW0Y"
+          />
+
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-D6C22PCW0Y');
+            `,
+            }}
+          />
         </Head>
         <DefaultSeo {...defaultSEOConfig} />
         <Layout>
