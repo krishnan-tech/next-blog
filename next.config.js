@@ -15,7 +15,7 @@ module.exports = withPWA({
   },
   reactStrictMode: true,
   images: {
-    loader: 'imgix',
-    path: '/',
+    loader: 'akamai',
+    path: '',
   },
 });
