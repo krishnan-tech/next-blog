@@ -14,8 +14,9 @@ module.exports = withPWA({
     register: true,
   },
   reactStrictMode: true,
-  images: {
-    loader: 'akamai',
-    path: '',
-  },
+  experimental: {
+        images: {
+            unoptimized: true
+        }
+    }
 });
