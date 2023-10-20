@@ -36,6 +36,7 @@ export default function PostPage({
   return (
     <>
       <Link href="/">
+        {/* @ts-ignore */}
         <Button colorScheme="gray" size="md">
           🔙 Back
         </Button>
