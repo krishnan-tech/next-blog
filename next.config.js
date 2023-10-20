@@ -14,9 +14,7 @@ module.exports = withPWA({
     register: true,
   },
   reactStrictMode: true,
-  experimental: {
-        images: {
-            unoptimized: true
-        }
-    }
+  images: {
+      unoptimized: true
+  }
 });
